@@ -1,5 +1,8 @@
+import { useState } from 'react'
 import Header from "./components/Header";
 import FeedbackItem from "./components/FeedbackItem";
+import FeedbackData from "./data/FeedbackData";
+import FeedbackList from './components/FeedbackList';
 
 function App() {
   const title = "Blog Post";
@@ -28,8 +31,27 @@ function App() {
   );
   if (loading) return <p> loading...</p>;
 
+
+
+
+const[feedback, setFeedback] = useState(FeedbackData)
+
+
+
+
+
+
+
+
   //when and why do we need state
   //global state when multiple components need to access sone data
+
+
+
+
+
+
+
 
   return (
     // orrr empty fragments instead of div tags <> </>
@@ -39,6 +61,7 @@ function App() {
       <Header text="Newbie " />
 
       <div className="container">
+        
         <h1> {title} </h1>
         <p> {body} </p>
 
@@ -50,6 +73,7 @@ function App() {
       </div>
 
       <FeedbackItem />
+      <FeedbackList/>
     </>
   );
 }

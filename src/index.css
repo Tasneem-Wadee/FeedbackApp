@@ -208,7 +208,7 @@ input:focus {
 }
 
 .about p {
-  margin: 10px 0;
+  margin: 100px 0;
 }
 
 @media (max-width: 600px) {
