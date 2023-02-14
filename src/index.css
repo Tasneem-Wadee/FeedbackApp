@@ -207,8 +207,17 @@ input:focus {
   margin-bottom: 20px;
 }
 
+.p-para {
+  margin: 100px 3px;
+  color: 'red';
+ /*text-align: center;*/
+}
+
+
 .about p {
-  margin: 100px 0;
+  margin: 100px 3px;
+  
+ /*text-align: center;*/
 }
 
 @media (max-width: 600px) {
