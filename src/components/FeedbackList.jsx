@@ -2,7 +2,9 @@
 import PropTypes from 'prop-types'
 import FeedbackItem from './FeedbackItem'
 import React from 'react'
-function FeedbackList({feedback}){
+
+
+function FeedbackList({feedback, handleDelete}){
    if(!feedback || feedback.length ===0){
        return <p>nothing yet</p>
    }
@@ -10,7 +12,9 @@ function FeedbackList({feedback}){
     return(
         <div className='feedback-list'>
             {feedback.map((item) => (
-                <FeedbackItem key={item.id} item={item} />
+                <FeedbackItem key={item.id}
+                item={item} 
+                handleDelete={handleDelete}/>
             ))}
             <p className='p-para'> are you showing </p>
         </div>
