@@ -31,25 +31,18 @@ function App() {
   if (loading) return <p> loading...</p>;
 
 
-
-
 const[feedback, setFeedback] = useState(FeedbackData)
-
-
-
-
-
-
 
 
   //when and why do we need state
   //global state when multiple components need to access sone data
 
-
-
-
-
-
+const deleteFeedback = (id) => {
+  if(window.confirm('Are you sure you want to delete?')){
+    setFeedback(feedback.filter((item) => item.id !== id))
+  }
+  
+}
 
 
   return (
@@ -71,7 +64,7 @@ const[feedback, setFeedback] = useState(FeedbackData)
         {showComments ? commentBlock : null}
       </div>
 
-      <FeedbackList feedback={feedback} />
+      <FeedbackList feedback={feedback} handleDelete={deleteFeedback}/>
     </>
   );
 }
